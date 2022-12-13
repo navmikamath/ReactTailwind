@@ -22,7 +22,7 @@ export default function Login() {
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="flex flex-wrap">
               <div>
-                <label htmlFor="email-address" className=" text-t3">
+                <label htmlFor="email-address" className="sr-only text-t3">
                   Email address
                 </label>
                 <div className="flex">
@@ -51,6 +51,7 @@ export default function Login() {
                   className="w-[384px] h-[28px] pl-[14px] pr-[38px] font-body text-sm bg-[#F3F4F6] border-0 rounded-lg outline-none"
                   placeholder="Password"
                 />
+                
               </div>
             </div>
 
