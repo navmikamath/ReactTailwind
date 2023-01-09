@@ -5,108 +5,95 @@ import { LockClosedIcon } from '@heroicons/react/solid'
 
 export default function Login() {
   return (
-    <div>
-      <div className='absolute  bg-white  w-[1440px] h-[900px]'>
-        <img src="./images/Image 2341.png" className='absolute w-[106px] h-9 rounded-m mt-14 ml-14'/>
-        <p className='absolute text-t3 font-body mt-[63px] ml-[473px] text-[#171A1F]'>
-          Dont have an account?
-          <a className='text-primary-500 underline' href="https://tailwindcss.com">Sign up</a>
-        </p>
-         <b className="absolute mt-[235px] ml-[313px] font-heading text-t8 text-[#171A1F]">Sign in</b> 
-
-                  {/*  form  */}
-        <div className=" flex items-center justify-center mt-[329px] ml-[174px] absolute opacity-100">
-        <div className="max-w-md w-full space-y-8">
-          
-          <form className=" space-y-5" action="#" method="POST">
-            <input type="hidden" name="remember" defaultValue="true" />
-            <div className="flex flex-wrap">
-              <div>
-                <label htmlFor="email-address" className="sr-only text-t3">
-                  Email address
-                </label>
-                <div className="flex">
-                <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="w-[384px] h-[28px] px-3.5 font-body text-sm bg-[#F3F4F6] border-0 rounded-lg outline-none
-                  hover:text-[#BDC1CAFF] hover:bg-[#F3F4F6]"
-                  placeholder="Email address"
-                />
+  <div>
+  <section className="h-full gradient-form bg-white md:h-screen">
+  <div className="container py-12 px-6 h-full">
+    <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+      <div className="xl:w-10/12">
+        <div className="block bg-white shadow-lg rounded-lg">
+          <div className="lg:flex lg:flex-wrap g-0">
+            <div className="lg:w-6/12 px-4 md:px-0">
+              <div className="md:p-12 md:mx-6">
+                <div className="text-center">
+                  <img
+                    className=" w-[106px]"
+                    src="./images/Image 2341.png"
+                    alt="logo"
+                  />
+                  
                 </div>
-              </div>
-              <div className='pt-7'>
-                <label htmlFor="password" className="sr-only">
-                  Password
-                </label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="w-[384px] h-[28px] pl-[14px] pr-[38px] font-body text-sm bg-[#F3F4F6] border-0 rounded-lg outline-none"
-                  placeholder="Password"
-                />
-                
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
-                  id="remember-me"
-                  name="remember-me"
-                  type="checkbox"
-                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500
-                  border-gray-300 rounded"
-                />
-                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                  Remember me
-                </label>
-              </div>
-
-              <div className="text-sm">
-                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                  Forgot your password?
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <button
+                <form>
+                  <p className="mb-4 font-heading text-t8 text-center">Sign In</p>
+                  <div className="mb-4">
+                    <input
+                      type="text"
+                      className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      id="exampleFormControlInput1"
+                      placeholder="Username"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <input
+                      type="password"
+                      className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      id="exampleFormControlInput1"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div className="text-center pt-1 mb-12 pb-1">
+                  <button
                 type="submit"
-                className="group relative w-full flex justify-center
+                className="w-full flex justify-center
                 py-2 px-4 border border-transparent text-sm font-medium
-                rounded-md text-white bg-indigo-600 hover:bg-indigo-700
-                focus:outline-none focus:ring-2 focus:ring-offset-2
-                focus:ring-indigo-500"
+                rounded-md text-white bg-info-400 hover:bg-info-450
+                focus:outline-none 
+                focus:ring-info-500"
               >
-                <span className="absolute left-0 inset-y-0 flex items-center pl-3">
+                <span className="left-0 inset-y-0 flex items-center pl-3">
                   <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
                   aria-hidden="true" />
                 </span>
                 Sign in
               </button>
+                    <a className="text-gray-500" href="#!">Forgot password?</a>
+                  </div>
+                  <div className="flex items-center justify-between pb-6">
+                    <p className="mb-0 mr-2">Don't have an account?</p>
+                    <button
+                      type="button"
+                      className="inline-block bg-danger-300 px-6 py-2 border-2 text-white font-medium text-xs  uppercase rounded hover:bg-danger-250 focus:outline-none 
+                      focus:ring-danger-350"
+                     
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                </form>
+
+              </div>
             </div>
-          </form>
+            
+            <div
+              className="lg:w-6/12 flex bg-primary-500 items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none">
+              <div className="text-white px-4 py-6 md:p-12 md:mx-6 text-center">
+              <img src ="./images/Image 2342.png"  className='object-center rounded-none w-[412px]'/>
+                <b className="font-heading text-t7 text-white ">
+                Voluptate dolor tempor
+                </b>
+                <div>
+                <small className='font-body text-t3 text-white'>Minim cupidatat cillum</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-      </div>
-
-
-                  {/* end  */}
-        
-
-      <div className='bg-primary-500 mt-0 ml-[732px] w-[708px] h-[900px] rounded-none absolute'>
-        <img src ="./images/Image 2342.png"  className='absolute  object-center ml-[148px] mt-[216px] w-[412px] h-[386px] rounded-none'/>
-        <b className='absolute mt-[632px] ml-[218px] font-heading text-t7 text-white'>Voluptate dolor tempor</b>
-        <small className='absolute mt-[672px] ml-[281px] font-body text-t3 text-white'>Minim cupidatat cillum</small>
-      </div>
       </div>
     </div>
+  </div>
+  </section>
+  </div>
+
+      
+   
   )
 }
